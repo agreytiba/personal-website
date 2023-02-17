@@ -4,26 +4,34 @@ import { AiFillTwitterCircle, AiFillGithub, AiFillYoutube, AiFillInstagram } fro
 import { Row, Col, Container } from 'react-bootstrap';
 const Footer = () => {
 	return (
+		<Container>
+
+		
 		<Row
-			className="bg-dark justify-content-center align-items-center fs-3 mb-4 py-5"
-			style={{ maxWidth: '400px', color: 'tomato' }}
+			className="bg-dark justify-content-center align-items-center fs-3 mb-5  text-danger"
 		>
-			<Col>
+			<Col md={2} >
 				<BsFacebook />
-			</Col>
-			<Col>
+			</Col >
+			<Col md={2}>
 				<AiFillInstagram />
 			</Col>
-			<Col>
+			<Col md={2}>
 				<AiFillYoutube />
 			</Col>
-			<Col>
+			<Col md={2}>
 				<AiFillGithub />
 			</Col>
-			<Col>
+			<Col md={2}>
 				<AiFillTwitterCircle />
 			</Col>
-		</Row>
+			
+			</Row>
+			<div className='text-center'>
+			
+          <p className='fs-3 text-light'> Created by <span className='text-danger'>Grey Coder</span></p>
+        </div>
+</Container>
 	);
 };
 

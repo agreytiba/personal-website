@@ -1,13 +1,13 @@
 import React from 'react'
-import {Row,Col,Card} from "react-bootstrap"
+import {Row,Col,Card,Container} from "react-bootstrap"
 const About = () => {
  
   return (
-    <>
+    <Container>
       <style type='text/css'>
         {`
         .about-card{
-          background-color: #333;
+          background-color: #444;
           color:tomato;
         }
         .subtitle{
@@ -22,9 +22,9 @@ const About = () => {
         `}
       </style>
       <Row className='text-light text-center mb-5 mt-5'>
-          <Col className='about-card pt-5 pb-5 text-center' md={6} style={{height:"250px"}}> 
+          <Col className='about-card pt-5 pb-5 text-center mb-2' md={6} style={{height:"250px"}}> 
               <Card.Title className='fs-title'>12</Card.Title>
-              <Card.Text className='subtitle'>year Experience</Card.Text>
+              <Card.Text className='subtitle'>Years Experience</Card.Text>
              
           </Col>
           <Col  md={3}>
@@ -51,10 +51,12 @@ const About = () => {
           
           </Col>
           
-          
+       
 
       </Row>
-    </>
+       
+     
+    </Container>
   )
 }
 

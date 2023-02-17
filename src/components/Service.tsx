@@ -6,14 +6,14 @@ import {TbBrandAdobe} from "react-icons/tb"
 import contents from '../Data/services.json';
 function Service() {
 	return (
-		<Row className="mb-5 mt-5">
+		<Row className="mb-5 mt-5 justify-content-center align-items-center">
 			{contents.map((content) => (
 				<Col key={content.id} className={content.cname}>
 					<Card
 						bg={content.bground.toLowerCase()}
 						key={content.bground}
 						text={content.bground.toLowerCase() === 'light' ? 'dark' : 'white'}
-						style={{ width: '18rem', height: '250px', backgroundColor: '#333' }}
+						style={{ minWidth:"250px", minHeight: '300px', backgroundColor: '#444' }}
 						className="mb-2"
 					>
 						<Card.Header className="text-center p-4">
@@ -24,7 +24,7 @@ function Service() {
 						<Card.Body>
 							<Card.Title className="">{content.title}</Card.Title>
 							<Card.Text>{content.desc.slice(0, 50)}</Card.Text>
-							{content.icon === 'branding' && <Card.Link style={{ color: "tomato", textDecoration: "none", fontSize: "14px" }}>Know More  <AiOutlineArrowRight /></Card.Link>}
+							{content.icon === 'branding' && <Card.Link style={{ color: "red", textDecoration: "none", fontSize: "14px" }}>Know More  <AiOutlineArrowRight /></Card.Link>}
 							{content.icon === 'camera' && <Card.Link style={{ color: "tomato", textDecoration: "none", fontSize: "14px" }}>Know More  <AiOutlineArrowRight /></Card.Link>}
 							{content.icon === 'board' && <Card.Link style={{ color: "white", textDecoration: "none", fontSize: "14px" }}>Know More  <AiOutlineArrowRight /></Card.Link>}
 						</Card.Body>

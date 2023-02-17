@@ -5,14 +5,14 @@ import  projectsInfo from "../Data/projects.json"
 const Projects = () => {
   return (
 
-    <Container className='text-light'>
-      <Row className='mb-2'>
+    <Container className='text-light '>
+      <Row className='mb-2 align-items-center'>
         <Col>
          <h2>FEATURED PROJECTS</h2>
      <p>Lorem ipsum dolor sit amet.</p>
         </Col>
-        <Col>
-         <Button className='me-auto' style={{backgroundColor:"tomato",border: "none"}}>VIEW ALL</Button>
+        <Col md={{ span: 1 ,offset:2}}>
+         <Button className='bg-danger me-1 button ' style={{border: "none", width:"100%",minWidth:"100px",height:"50px"}}>VIEW ALL</Button>
         </Col>
       </Row>
      
@@ -21,8 +21,8 @@ const Projects = () => {
       {
         projectsInfo.map(project =>
           <Col md={6} className="bg-dark mb-4">
-            <Card className='text-light' style={{border:"none"}}>
-              <Card.Header style={{ backgroundColor:"#333", height: "350px"}} className="d-flex justify-content-center align-items-center">
+            <Card className='text-light rounded' style={{border:"none"}}>
+              <Card.Header style={{ backgroundColor:"#444", height: "350px"}} className="d-flex justify-content-center align-items-center rounded">
                 <Card.Img src={project.img}  style={{width:"100%", height:"300px"}} />
               </Card.Header>
             
@@ -38,16 +38,16 @@ const Projects = () => {
       }
       </Row>
       <Row className=' mb-5 mt-5 py-5 align-items-center'style={{backgroundColor:"#333"}}>
-        <Col md={9}>
+        <Col className="mb-3">
         <Card.Title className='fs-2' style={{maxWidth:"400px"}}>
           Let's work together on  your next project
         </Card.Title>
         <Card.Text className='mt-2' style={{maxWidth:"450px",lineHeight:"2",fontSize:"14px"}}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eum ratione vero. Perferendis maiores eveniet expedita quos veritatis voluptatum eius.
         </Card.Text>
-        </Col>
-        <Col>
-        <Button className='justify-self-end' style={{backgroundColor:"tomato",border:"none"}}>Contact</Button>
+        </Col >
+        <Col md={{ span: 2 }} className="mb-4">
+        <Button className='justify-self-end bg-danger button' style={{border:"none",width:"100%",height:"50px"}}>Contact</Button>
         </Col>
       </Row>
     
